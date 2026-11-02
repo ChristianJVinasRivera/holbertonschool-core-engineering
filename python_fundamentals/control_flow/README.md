@@ -1,0 +1,21 @@
+# Python - Control Flow
+
+Exercises on conditional statements, comparison operators, Boolean logic,
+and loops in Python.
+
+## Task 0: Positive or negative
+
+`positive_or_negative.py` generates a random integer from -10 to 10 and
+prints whether it is positive, zero, or negative using if, elif, and else.
+
+Run the script:
+
+```bash
+./positive_or_negative.py
+```
+
+Check code style:
+
+```bash
+python3 -m pycodestyle positive_or_negative.py
+```
