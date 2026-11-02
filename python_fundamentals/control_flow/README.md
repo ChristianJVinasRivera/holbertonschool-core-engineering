@@ -55,3 +55,21 @@ Check code style:
 ```bash
 python3 -m pycodestyle print_alphabt.py
 ```
+
+## Task 3: Hexadecimal Printing
+
+`print_hexa.py` prints numbers from 0 to 98 in decimal and hexadecimal.
+It uses one loop and one print call with string formatting.
+Each line follows the format `98 = 0x62` and ends with a newline.
+
+Run the script:
+
+```bash
+./print_hexa.py
+```
+
+Check code style:
+
+```bash
+python3 -m pycodestyle print_hexa.py
+```
