@@ -41,8 +41,8 @@ python3 -m pycodestyle last_digit.py
 ## Task 2: Alphabet Game (Lowercase)
 
 `print_alphabt.py` prints the lowercase alphabet except for `e` and `q`.
-It uses a loop and a condition to build the output, then calls `print`
-once. The output contains no spaces and ends with one newline.
+It uses one loop and one print call in the code, with string formatting.
+The output has 24 characters, no spaces, and no trailing newline.
 
 Run the script:
 
