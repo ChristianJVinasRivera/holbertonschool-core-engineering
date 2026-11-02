@@ -37,3 +37,21 @@ Check code style:
 ```bash
 python3 -m pycodestyle last_digit.py
 ```
+
+## Task 2: Alphabet Game (Lowercase)
+
+`print_alphabt.py` prints the lowercase alphabet except for `e` and `q`.
+It uses a loop and a condition to build the output, then calls `print`
+once. The output contains no spaces and ends with one newline.
+
+Run the script:
+
+```bash
+./print_alphabt.py
+```
+
+Check code style:
+
+```bash
+python3 -m pycodestyle print_alphabt.py
+```
