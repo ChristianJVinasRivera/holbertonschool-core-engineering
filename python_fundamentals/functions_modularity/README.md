@@ -55,3 +55,28 @@ uppercase("Holberton")  # HOLBERTON
 uppercase("aZ 09!?")    # AZ 09!?
 uppercase("")           # Prints one newline
 ```
+
+## Task 2: Print Last Digit
+
+File: `print_last_digit.py`
+
+Defines `print_last_digit(number)`, which prints the last digit of an
+integer and returns that digit as an integer from 0 to 9.
+
+The function uses `abs(number) % 10` so negative inputs also produce a
+nonnegative digit. It prints the digit using string formatting, without
+extra text or a trailing newline.
+
+### Validation
+
+- Passed the Python syntax check and `pycodestyle` 2.7.0.
+- Tested positive, negative, and zero inputs: 98, -1024, and 0.
+- Verified that the returned values are 8, 4, and 0, respectively.
+
+### Example
+
+```python
+from print_last_digit import print_last_digit
+
+last = print_last_digit(-1024)  # Prints 4 and returns 4
+```
