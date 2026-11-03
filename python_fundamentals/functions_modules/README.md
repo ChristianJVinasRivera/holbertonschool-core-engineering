@@ -69,3 +69,40 @@ The execution guard keeps the calculation and print call from running when
 - Both files passed `python3 -m pycodestyle add.py add_0.py`.
 - Direct execution produced the expected output followed by a newline.
 - Importing `add` produced no output, verified by capturing standard output.
+
+## Task 6: My First Toolbox
+
+### Files
+
+- `calculator_1.py`: defines `add`, `sub`, `mul`, and `div`.
+- `calculation.py`: imports these functions and displays their results.
+
+### Behavior
+
+The program assigns `a = 10` and `b = 5`, then prints each operation
+on its own line using string formatting.
+
+Run the program:
+
+```bash
+python3 calculation.py
+```
+
+Expected output:
+
+```text
+10 + 5 = 15
+10 - 5 = 5
+10 * 5 = 50
+10 / 5 = 2
+```
+
+The `div` function uses integer division. Explicit imports are used
+instead of wildcard imports. The execution guard prevents the
+calculations and print calls from running when the script is imported.
+
+### Validation
+
+- Both files passed syntax compilation and pycodestyle checks.
+- Direct execution produced the four expected output lines.
+- Importing `calculation` produced no output, verified by capturing stdout.
