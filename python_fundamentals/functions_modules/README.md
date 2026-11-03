@@ -38,3 +38,34 @@ python3 -m pycodestyle simple_add.py test_import.py
 ```
 
 Direct execution and import were tested before and after adding the guard.
+
+## Task 5: Import a Simple Function from a Simple File
+
+### Files
+
+- `add_0.py`: defines `add(a, b)` and returns the sum of its arguments.
+- `add.py`: imports `add`, assigns `a = 1` and `b = 2`, and prints the result.
+
+### Behavior
+
+Run the program:
+
+```bash
+python3 add.py
+```
+
+Expected output:
+
+```text
+1 + 2 = 3
+```
+
+The execution guard keeps the calculation and print call from running when
+`add.py` is imported. The program does not use wildcard imports or
+`__import__`.
+
+### Validation
+
+- Both files passed `python3 -m pycodestyle add.py add_0.py`.
+- Direct execution produced the expected output followed by a newline.
+- Importing `add` produced no output, verified by capturing standard output.
