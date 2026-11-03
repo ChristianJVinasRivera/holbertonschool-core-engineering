@@ -73,3 +73,22 @@ Check code style:
 ```bash
 python3 -m pycodestyle print_hexa.py
 ```
+
+## Task 4: Two-Digit Numbers
+
+`print_comb2.py` prints numbers from 0 to 99 using two digits.
+Numbers are separated by a comma and a space, with no trailing comma.
+The output ends with a newline.
+It uses one loop and one print call with string formatting.
+
+Run the script:
+
+```bash
+./print_comb2.py
+```
+
+Check code style:
+
+```bash
+python3 -m pycodestyle print_comb2.py
+```
