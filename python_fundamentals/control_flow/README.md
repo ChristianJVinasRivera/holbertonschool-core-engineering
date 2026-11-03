@@ -92,3 +92,23 @@ Check code style:
 ```bash
 python3 -m pycodestyle print_comb2.py
 ```
+
+## Task 5: Combinations of Two Digits
+
+`print_comb3.py` prints all unique combinations of two different digits.
+Each pair is in ascending order, from 01 to 89, without repetitions.
+Combinations are separated by a comma and a space.
+The output ends with a newline and has no trailing comma.
+It uses two loops and one print call with string formatting.
+
+Run the script:
+
+```bash
+./print_comb3.py
+```
+
+Check code style:
+
+```bash
+python3 -m pycodestyle print_comb3.py
+```
