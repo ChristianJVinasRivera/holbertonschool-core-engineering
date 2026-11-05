@@ -106,3 +106,22 @@ calculations and print calls from running when the script is imported.
 - Both files passed syntax compilation and pycodestyle checks.
 - Direct execution produced the four expected output lines.
 - Importing `calculation` produced no output, verified by capturing stdout.
+
+## Task 7: Everything Can Be Imported
+
+### Files
+
+- `variable_load.py`: imports `a` from `variable_load_5.py` and prints its value.
+- `variable_load_5.py`: local helper module defining `a = 98`.
+
+### Behavior
+
+Run `python3 variable_load.py` to print `98` followed by a newline.
+The `if __name__ == "__main__":` guard prevents printing when imported.
+The program uses an explicit import without a wildcard.
+
+### Validation
+
+- Direct execution printed `98`.
+- Importing `variable_load` produced no output before the confirmation message.
+- Both files passed `python3 -m pycodestyle`.
