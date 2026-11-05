@@ -1,0 +1,9 @@
+#!/usr/bin/env python3
+"""Provide safe access to list elements."""
+
+
+def element_at(my_list, idx):
+    """Return the element at idx, or None for an invalid index."""
+    if idx < 0 or idx >= len(my_list):
+        return None
+    return my_list[idx]
