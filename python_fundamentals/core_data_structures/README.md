@@ -70,3 +70,24 @@ The matrix is not modified. No modules are imported by the function file.
 - Tested `[[]]` and the default argument: one newline.
 - Confirmed that the matrix remains unchanged and the function returns `None`.
 - Added user execution permission to `print_matrix_integer.py`.
+
+## Task 4: Tuple addition
+
+File: `add_tuple.py`
+
+The function `add_tuple(tuple_a=(), tuple_b=())` returns a tuple of two
+integers by adding the corresponding first and second values of each input.
+Missing values are treated as zero, and values beyond the first two are ignored.
+Tuple concatenation adds padding zeros, and slicing keeps the first two values.
+The original tuples remain unchanged. No modules are imported.
+
+### Validation
+
+- Checked style with `python3 -m pycodestyle add_tuple.py`.
+- Tested two complete tuples and verified position-by-position addition.
+- Tested empty tuples, single-element tuples, and default arguments.
+- Tested extra elements: only the first two values were used.
+- Tested negative integers and zero.
+- Confirmed that each result is a tuple containing exactly two values.
+- Confirmed that the input tuples remain unchanged.
+- Added user execution permission to `add_tuple.py`.
