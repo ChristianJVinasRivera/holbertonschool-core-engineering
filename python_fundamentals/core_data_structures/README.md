@@ -33,3 +33,21 @@ It returns `None` if the index is negative or greater than or equal to
 - Tested an empty list at index `0`: returned `None`.
 - Confirmed that the original list remains unchanged.
 - Added user execution permission to `element_at.py`.
+
+## Task 2: Replace an element in a list
+
+File: `replace_in_list.py`
+
+The function `replace_in_list(my_list, idx, element)` replaces the element
+at a valid index and returns the original list object.
+If `idx` is negative or greater than or equal to `len(my_list)`, the list
+is returned unchanged. No modules are imported.
+
+### Validation
+
+- Checked style with `python3 -m pycodestyle replace_in_list.py`.
+- Tested replacement at indices `0`, `3`, and `4` in a five-element list.
+- Tested invalid indices `-1`, `5`, and `15`: the list remained unchanged.
+- Tested an empty list at index `0`: it remained empty.
+- Confirmed that every call returns the original list object using `is`.
+- Added user execution permission to `replace_in_list.py`.
