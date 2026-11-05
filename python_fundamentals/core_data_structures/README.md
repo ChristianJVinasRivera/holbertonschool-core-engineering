@@ -51,3 +51,22 @@ is returned unchanged. No modules are imported.
 - Tested an empty list at index `0`: it remained empty.
 - Confirmed that every call returns the original list object using `is`.
 - Added user execution permission to `replace_in_list.py`.
+
+## Task 3: Print a matrix of integers
+
+File: `print_matrix_integer.py`
+
+The function `print_matrix_integer(matrix=[[]])` prints each row on its
+own line using nested loops and `{:d}` integer formatting.
+Values in a row are separated by one space, with no trailing spaces.
+The matrix is not modified. No modules are imported by the function file.
+
+### Validation
+
+- Checked style with `python3 -m pycodestyle print_matrix_integer.py`.
+- Tested a 3-by-3 matrix and verified the exact output.
+- Tested negative integers, zero, and single-column rows.
+- Tested `[]`: no output.
+- Tested `[[]]` and the default argument: one newline.
+- Confirmed that the matrix remains unchanged and the function returns `None`.
+- Added user execution permission to `print_matrix_integer.py`.
