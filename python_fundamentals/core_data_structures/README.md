@@ -91,3 +91,22 @@ The original tuples remain unchanged. No modules are imported.
 - Confirmed that each result is a tuple containing exactly two values.
 - Confirmed that the input tuples remain unchanged.
 - Added user execution permission to `add_tuple.py`.
+
+## Task 5: Common elements in two sets
+
+File: `common_elements.py`
+
+The function `common_elements(set_1, set_2)` returns a new set containing
+only elements present in both input sets. It uses the `&` intersection operator.
+The original sets remain unchanged. No modules are imported.
+
+### Validation
+
+- Checked style with `python3 -m pycodestyle common_elements.py`.
+- Tested the task example: the only common element is `"C"`.
+- Tested disjoint sets: the result is an empty set.
+- Tested one empty input and two empty inputs.
+- Tested identical sets and sets containing negative integers and zero.
+- Confirmed that each result is a new set, distinct from both inputs.
+- Confirmed that both input sets remain unchanged.
+- Added user execution permission to `common_elements.py`.
