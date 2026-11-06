@@ -110,3 +110,21 @@ The original sets remain unchanged. No modules are imported.
 - Confirmed that each result is a new set, distinct from both inputs.
 - Confirmed that both input sets remain unchanged.
 - Added user execution permission to `common_elements.py`.
+
+## Task 6: Update or add a key/value pair in a dictionary
+
+File: `update_dictionary.py`
+
+The function `update_dictionary(a_dictionary, key, value)` replaces the value
+if the key exists, or adds a new key/value pair otherwise.
+It modifies the original dictionary and returns that same dictionary.
+Other keys remain unchanged. No modules are imported.
+
+### Validation
+
+- Checked style with `python3 -m pycodestyle update_dictionary.py`.
+- Tested replacing an existing value while preserving other keys.
+- Tested adding a new key/value pair.
+- Tested adding the first key/value pair to an empty dictionary.
+- Confirmed that the returned object is the original dictionary using `is`.
+- Added user execution permission to `update_dictionary.py`.
