@@ -128,3 +128,22 @@ Other keys remain unchanged. No modules are imported.
 - Tested adding the first key/value pair to an empty dictionary.
 - Confirmed that the returned object is the original dictionary using `is`.
 - Added user execution permission to `update_dictionary.py`.
+
+## Task 7: Best score
+
+File: `best_score.py`
+
+The function `best_score(a_dictionary)` returns the key with the highest
+integer value. It returns `None` when the input is `None` or empty.
+It uses `max(a_dictionary, key=a_dictionary.get)` to compare values.
+The original dictionary remains unchanged. No modules are imported.
+
+### Validation
+
+- Checked style with `python3 -m pycodestyle best_score.py`.
+- Tested the task example: the highest-scoring key is `Molly`.
+- Tested `None` and an empty dictionary: both return `None`.
+- Tested a dictionary containing a single key.
+- Tested negative values and zero.
+- Confirmed that the input dictionary remains unchanged.
+- Added user execution permission to `best_score.py`.
