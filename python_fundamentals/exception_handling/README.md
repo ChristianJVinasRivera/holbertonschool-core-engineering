@@ -117,3 +117,27 @@ Raises a TypeError explicitly when called.
 - Style check: `python3 -m pycodestyle raise_exception.py`
 - Three external tests passed: exact TypeError raised, no stdout,
   and no stderr while the test catches the exception.
+
+## Task 5: Raise a message
+
+File: `raise_exception_msg.py`
+
+Prototype: `def raise_exception_msg(message=""):`
+
+Raises a NameError with the supplied message.
+
+### How it works
+
+- Accepts an optional message, defaulting to an empty string.
+- Uses `raise NameError(message)` to trigger the exception.
+- Allows the exception to propagate to the caller.
+- Does not print anything or catch the exception internally.
+
+### Local validation
+
+- Syntax check: `python3 -m py_compile raise_exception_msg.py`
+- Style check: `python3 -m pycodestyle raise_exception_msg.py`
+- Five external tests passed: default message, explicit empty message,
+  and three custom messages, including accented characters.
+- Each test verified the exact NameError type, message and arguments,
+  with no stdout or stderr while the test catches the exception.
