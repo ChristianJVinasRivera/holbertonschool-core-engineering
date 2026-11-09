@@ -25,3 +25,25 @@ Returns the actual number of elements printed.
 - Six external tests passed, checking output and return values:
   partial list, request beyond the list, empty list, zero elements,
   mixed types, and a negative request.
+
+## Task 1: Safe integer printing
+
+File: `safe_print_integer.py`
+
+Prototype: `def safe_print_integer(value):`
+
+Prints an integer using `"{:d}".format(value)`, followed by a newline.
+Returns `True` when printing succeeds.
+Returns `False` when the value cannot be formatted as an integer.
+
+### How it works
+
+- Uses `try` to format and print the value.
+- Catches `ValueError` and `TypeError` for unsupported values.
+- Uses no imports and does not use `type()`.
+
+### Local validation
+
+- Syntax and pycodestyle checks passed.
+- Seven external tests checked output and return values:
+  positive integer, negative integer, zero, string, float, None, and list.
