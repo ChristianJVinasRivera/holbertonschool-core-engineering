@@ -96,3 +96,24 @@ Always prints `Inside result: <result>` followed by a newline.
   normal division, division by zero, zero numerator, negative numerator,
   negative denominator, fractional result, zero divided by zero,
   string input, and None input.
+
+## Task 4: Raise exception
+
+File: `raise_exception.py`
+
+Prototype: `def raise_exception():`
+
+Raises a TypeError explicitly when called.
+
+### How it works
+
+- Uses `raise TypeError` to trigger the exception.
+- Allows the exception to propagate to the caller.
+- Does not print anything or catch the exception internally.
+
+### Local validation
+
+- Syntax check: `python3 -m py_compile raise_exception.py`
+- Style check: `python3 -m pycodestyle raise_exception.py`
+- Three external tests passed: exact TypeError raised, no stdout,
+  and no stderr while the test catches the exception.
