@@ -41,9 +41,32 @@ Returns `False` when the value cannot be formatted as an integer.
 - Uses `try` to format and print the value.
 - Catches `ValueError` and `TypeError` for unsupported values.
 - Uses no imports and does not use `type()`.
+- Style check: `python3 -m pycodestyle safe_print_integer.py`
+- Seven external tests passed, checking output and return values:
+  positive integer, negative integer, zero, string, float, None, and list.
+
+## Task 2: Safe list printing with type handling
+
+File: `safe_print_list_integers.py`
+
+Prototype: `def safe_print_list_integers(my_list=[], x=0):`
+
+Examines the first `x` positions and prints only integers without spaces.
+Prints a final newline and returns the number of integers printed.
+If a requested index is outside the list, `IndexError` propagates
+before the final newline and return statement are reached.
+
+### How it works
+
+- Iterates over the requested positions using `range(x)`.
+- Uses `"{:d}".format()` inside `try` to print each integer.
+- Increments the counter only after a successful print.
+- Catches `ValueError` and `TypeError` to skip unsupported values.
+- Allows `IndexError` to propagate when `x` exceeds the list length.
 
 ### Local validation
 
-- Syntax and pycodestyle checks passed.
-- Seven external tests checked output and return values:
-  positive integer, negative integer, zero, string, float, None, and list.
+- Syntax check: `python3 -m py_compile safe_print_list_integers.py`
+- Style check: `python3 -m pycodestyle safe_print_list_integers.py`
+- Eight external tests passed, checking output, counts, mixed types,
+  empty lists, negative requests, zero, negative integers, and IndexError.
