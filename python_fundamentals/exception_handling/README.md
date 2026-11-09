@@ -70,3 +70,29 @@ before the final newline and return statement are reached.
 - Style check: `python3 -m pycodestyle safe_print_list_integers.py`
 - Eight external tests passed, checking output, counts, mixed types,
   empty lists, negative requests, zero, negative integers, and IndexError.
+
+## Task 3: Divide two integers safely
+
+File: `safe_print_division.py`
+
+Prototype: `def safe_print_division(a, b):`
+
+Divides two integers and returns the result, or None on failure.
+Always prints `Inside result: <result>` followed by a newline.
+
+### How it works
+
+- Initializes `result` to None before attempting the division.
+- Performs `a / b` inside a `try` block.
+- Catches `ZeroDivisionError` and `TypeError`, keeping the result as None.
+- Uses `finally` to print the result whether division succeeds or fails.
+- Returns the result after the `finally` block.
+
+### Local validation
+
+- Syntax check: `python3 -m py_compile safe_print_division.py`
+- Style check: `python3 -m pycodestyle safe_print_division.py`
+- Nine external tests passed, checking return values and exact printed output:
+  normal division, division by zero, zero numerator, negative numerator,
+  negative denominator, fractional result, zero divided by zero,
+  string input, and None input.
