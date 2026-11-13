@@ -85,3 +85,29 @@ except Exception as error:
 python3 -m py_compile base_geometry.py
 python3 -m pycodestyle base_geometry.py
 ```
+
+## Task 2: Rectangle
+
+`1-rectangle.py` defines `Rectangle`, a subclass of `BaseGeometry`.
+Its constructor requires `width` and `height`, validates both using the
+inherited `integer_validator`, and stores them as private attributes.
+Both dimensions must be integers strictly greater than zero; booleans
+are rejected. No public getters or setters are defined.
+
+```python
+Rectangle = __import__('1-rectangle').Rectangle
+rectangle = Rectangle(3, 5)
+# rectangle.width raises AttributeError: dimensions are private.
+# rectangle.area() raises Exception('area() is not implemented').
+```
+
+Invalid types raise `TypeError` with `<name> must be an integer`.
+Zero or negative integers raise `ValueError` with
+`<name> must be greater than 0`. Validation is inherited, not duplicated.
+
+### Local checks
+
+```bash
+python3 -m py_compile 1-rectangle.py
+python3 -m pycodestyle 1-rectangle.py
+```
