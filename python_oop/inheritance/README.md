@@ -141,3 +141,25 @@ Zero or negative integers raise `ValueError` with
 python3 -m py_compile 2-rectangle.py
 python3 -m pycodestyle 2-rectangle.py
 ```
+
+## Task 4: Square #1
+
+`1-square.py` defines `Square`, a subclass of `Rectangle`.
+
+- `Square(size)` validates size with the inherited `integer_validator`.
+- Size must be an integer greater than zero; booleans are rejected.
+- The side length is stored privately as `__size`, without a getter or setter.
+- The parent constructor initializes equal width and height.
+- `area()` returns the side length squared.
+- The inherited string representation keeps the `[Rectangle]` label.
+
+```python
+Square = __import__('1-square').Square
+square = Square(13)
+print(square)         # [Rectangle] 13/13
+print(square.area())  # 169
+```
+
+Invalid types raise `TypeError` with `size must be an integer`.
+Zero or negative sizes raise `ValueError` with
+`size must be greater than 0`.
