@@ -246,3 +246,21 @@ square.my_print()
   ###
   ###
 ```
+
+## Task 8: Rectangle Class
+
+### File
+`1-rectangle.py`
+
+### Objective
+Model a rectangle with validated private width and height.
+
+### Implementation
+- Constructor: `Rectangle(width=0, height=0)`.
+- Private attributes: `__width` and `__height`.
+- Properties `width` and `height` support reading and updating.
+- Setters require integers, otherwise raising `TypeError` with
+  `width must be an integer` or `height must be an integer`.
+- Negative values raise `ValueError` with `width must be >= 0` or
+  `height must be >= 0`. Zero is allowed.
+- Invalid assignments preserve the previous value.
