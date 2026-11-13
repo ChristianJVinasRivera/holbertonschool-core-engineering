@@ -137,3 +137,41 @@ print(Square(5).area())
 9
 25
 ```
+
+## Task 5: Access and Update Private Attribute
+
+### File
+`4-square.py`
+
+### Objective
+Read and update the size of a square through a validated property.
+
+### Implementation
+- Keep the size in the private `__size` attribute.
+- Read the size with the `@property` getter `size`.
+- Validate assignments with `@size.setter` before storing the value.
+- Raise `TypeError("size must be an integer")` for non-integers.
+- Raise `ValueError("size must be >= 0")` for negative integers.
+- Initialize with `self.size = size` to reuse the same validation rules.
+- Keep `area()` to return the current size squared.
+
+### Usage
+```python
+Square = __import__('4-square').Square
+
+square = Square(89)
+print(square.area(), square.size)
+square.size = 3
+print(square.area(), square.size)
+try:
+    square.size = "5 feet"
+except TypeError as error:
+    print(error)
+```
+
+### Expected output
+```text
+7921 89
+9 3
+size must be an integer
+```
