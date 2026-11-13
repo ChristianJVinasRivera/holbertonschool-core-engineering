@@ -111,3 +111,33 @@ Zero or negative integers raise `ValueError` with
 python3 -m py_compile 1-rectangle.py
 python3 -m pycodestyle 1-rectangle.py
 ```
+
+## Task 3: Full Rectangle
+
+File: `2-rectangle.py`
+
+`Rectangle` extends `BaseGeometry` and validates positive integer dimensions
+with the inherited `integer_validator`. Width and height remain private,
+without getters or setters.
+
+- `area()` returns width multiplied by height.
+- `__str__()` returns `[Rectangle] <width>/<height>`.
+- `print(rectangle)` uses that string representation automatically.
+
+```python
+Rectangle = __import__('2-rectangle').Rectangle
+rectangle = Rectangle(3, 5)
+print(rectangle)         # [Rectangle] 3/5
+print(rectangle.area())  # 15
+```
+
+Invalid types raise `TypeError` with `<name> must be an integer`.
+Zero or negative integers raise `ValueError` with
+`<name> must be greater than 0`. Validation is inherited, not duplicated.
+
+### Local checks
+
+```bash
+python3 -m py_compile 2-rectangle.py
+python3 -m pycodestyle 2-rectangle.py
+```
