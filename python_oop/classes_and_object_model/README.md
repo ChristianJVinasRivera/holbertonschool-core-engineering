@@ -208,3 +208,41 @@ square.my_print()
 ###
 
 ```
+
+## Task 7: Print Square Instance
+
+### File
+`6-square.py`
+
+### Objective
+Print a square instance with horizontal and vertical offsets.
+
+### Implementation
+- Keep the validated private size, its property, and `area()`.
+- Add a private `position`, defaulting to `(0, 0)`.
+- Validate position as a tuple of two non-negative integers.
+- Raise `TypeError` with `position must be a tuple of 2 positive integers` for invalid positions.
+- Use `__str__()` to return the positioned square without a trailing newline.
+- Make `my_print()` and `print(square)` produce the same output.
+- Print one empty line when size is zero, regardless of position.
+
+### Usage
+```python
+Square = __import__('6-square').Square
+
+square = Square(3, (2, 1))
+print(square)
+square.my_print()
+```
+
+### Expected output
+```text
+
+  ###
+  ###
+  ###
+
+  ###
+  ###
+  ###
+```
