@@ -107,3 +107,33 @@ for size in ("3", -89):
 size must be an integer
 size must be >= 0
 ```
+
+## Task 4: Area of a Square
+
+### File
+`3-square.py`
+
+### Objective
+Calculate the area of a square while keeping its size private.
+
+### Implementation
+- Keep `__init__(self, size=0)` and the existing size validations.
+- Store the validated size in the private `__size` attribute.
+- Add the public instance method `area(self)`.
+- Return `self.__size ** 2`: the side length multiplied by itself.
+
+### Usage
+```python
+Square = __import__('3-square').Square
+
+print(Square().area())
+print(Square(3).area())
+print(Square(5).area())
+```
+
+### Expected output
+```text
+0
+9
+25
+```
