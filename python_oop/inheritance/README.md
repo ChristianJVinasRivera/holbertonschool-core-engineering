@@ -163,3 +163,36 @@ print(square.area())  # 169
 Invalid types raise `TypeError` with `size must be an integer`.
 Zero or negative sizes raise `ValueError` with
 `size must be greater than 0`.
+
+## Task 5: Square #2
+
+File: `2-square.py`
+
+Extends the previous Square class and specializes `__str__` so both
+`print(square)` and `str(square)` describe the object as
+`[Square] <width>/<height>`. Initialization, private size storage,
+positive-integer validation and area calculation remain inherited.
+The earlier Rectangle and Square classes are unchanged.
+
+Example:
+
+```python
+Square = __import__('2-square').Square
+square = Square(13)
+print(square)
+print(square.area())
+```
+
+Output:
+
+```text
+[Square] 13/13
+169
+```
+
+Validation:
+
+```bash
+python3 -m py_compile 2-square.py
+python3 -m pycodestyle 2-square.py
+```
