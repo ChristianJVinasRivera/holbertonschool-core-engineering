@@ -70,3 +70,40 @@ for name in ('size', '__size'):
 'Square' object has no attribute 'size'
 'Square' object has no attribute '__size'
 ```
+
+## Task 3: Size Validation
+
+### File
+`2-square.py`
+
+### Objective
+Validate the size before storing it in the private `__size` attribute.
+
+### Implementation
+- Use `__init__(self, size=0)` so the default size is zero.
+- Check the type with `isinstance(size, int)`.
+- Raise `TypeError("size must be an integer")` for non-integer values.
+- Raise `ValueError("size must be >= 0")` for negative integers.
+- Store the size only after both checks pass.
+
+### Usage
+```python
+Square = __import__('2-square').Square
+
+print(Square().__dict__)
+print(Square(3).__dict__)
+
+for size in ("3", -89):
+    try:
+        Square(size)
+    except (TypeError, ValueError) as error:
+        print(error)
+```
+
+### Expected output
+```text
+{'_Square__size': 0}
+{'_Square__size': 3}
+size must be an integer
+size must be >= 0
+```
