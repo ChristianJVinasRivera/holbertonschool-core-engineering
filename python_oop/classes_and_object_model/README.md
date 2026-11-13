@@ -175,3 +175,36 @@ except TypeError as error:
 9 3
 size must be an integer
 ```
+
+## Task 6: Printing a Square
+
+### File
+`5-square.py`
+
+### Objective
+Print a square using the `#` character.
+
+### Implementation
+- Keep the private size, validated property, constructor, and `area()` method.
+- Add the public method `my_print()`.
+- Print `size` rows, each containing `size` consecutive `#` characters.
+- Print an empty line when the size is zero.
+- Read the current size so updates affect the next printed square.
+
+### Usage
+```python
+Square = __import__('5-square').Square
+
+square = Square(3)
+square.my_print()
+square.size = 0
+square.my_print()
+```
+
+### Expected output
+```text
+###
+###
+###
+
+```
