@@ -264,3 +264,21 @@ Model a rectangle with validated private width and height.
 - Negative values raise `ValueError` with `width must be >= 0` or
   `height must be >= 0`. Zero is allowed.
 - Invalid assignments preserve the previous value.
+
+## Task 9: Area and Perimeter
+
+### File
+`2-rectangle.py`
+
+### Objective
+Compute the area and perimeter of a rectangle.
+
+### Implementation
+- Preserve the validated private width and height properties.
+- `area()` returns `width * height`.
+- `perimeter()` returns `2 * (width + height)`, or zero if either dimension is zero.
+- Both methods return values without printing.
+
+### Example
+- `Rectangle(2, 4)`: area 8, perimeter 12.
+- After setting width to 10 and height to 3: area 30, perimeter 26.
