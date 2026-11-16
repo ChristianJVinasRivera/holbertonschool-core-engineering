@@ -84,3 +84,42 @@ Perimeter: 22
 python3 -m py_compile shapes.py
 python3 -m pycodestyle shapes.py
 ```
+
+## Task 2: The Enigmatic FlyingFish - Exploring Multiple Inheritance
+
+`flyingfish.py` demonstrates multiple inheritance and method overriding:
+
+- `Fish` defines `swim()` and `habitat()`.
+- `Bird` defines `fly()` and `habitat()`.
+- `FlyingFish(Fish, Bird)` inherits from both classes and overrides all three
+  methods with behavior specific to a flying fish.
+- `FlyingFish.__mro__` (or `FlyingFish.mro()`) shows the method resolution
+  order: `FlyingFish`, `Fish`, `Bird`, then `object`. Python searches in that
+  order and uses the first matching method. Here the overrides in `FlyingFish`
+  take precedence over the parent implementations.
+
+### Example
+
+```python
+from flyingfish import Fish, Bird, FlyingFish
+
+flying_fish = FlyingFish()
+flying_fish.swim()
+flying_fish.fly()
+flying_fish.habitat()
+```
+
+Expected output:
+
+```text
+The flying fish is swimming!
+The flying fish is soaring!
+The flying fish lives both in water and the sky!
+```
+
+### Local validation
+
+```bash
+python3 -m py_compile flyingfish.py
+python3 -m pycodestyle flyingfish.py
+```
